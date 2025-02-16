@@ -8,12 +8,10 @@ Agent（智能体）  Environment（环境）   State（状态）  Action（动�
 
 
 1.2 解释什么是回报（Return）和价值函数（Value Function）？  
+  - 回报：从某一时刻开始，未来所有奖励的折扣总和  
+  - 价值函数：从某个状态开始，遵循特定策略能够获得的期望回报  
 
-回报：从某一时刻开始，未来所有奖励的折扣总和  
-
-价值函数：从某个状态开始，遵循特定策略能够获得的期望回报  
-
-全部可观测（full observability）、完全可观测（fully observed）和部分可观测（partially observed）?
+1.3 全部可观测（full observability）、完全可观测（fully observed）和部分可观测（partially observed）?
   - 当智能体的状态与环境的状态等价时，我们就称这个环境是全部可观测的
   - 当智能体能够观察到环境的所有状态时，我们称这个环境是完全可观测的
   - 一般智能体不能观察到环境的所有状态时，我们称这个环境是部分可观测的
