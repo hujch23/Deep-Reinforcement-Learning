@@ -145,19 +145,14 @@ Q_{\pi}(s,a)=\sum_{s',r}p(s',r|s,a)r(s',a)+\gamma V_{\pi}(s')
 
 动态规划有两种主要方法：策略迭代（Policy Iteration）和值迭代（Value Iteration）。让我详细解释：
 
-策略迭代（Policy Iteration）
-包含两个交替进行的步骤：
-A. 策略评估（Policy Evaluation）
-
-固定当前策略π
-重复计算状态价值，直到收敛：
+策略迭代（Policy Iteration）：A. 策略评估（Policy Evaluation）固定当前策略π，重复计算状态价值，直到收敛：
 V<sub>k+1</sub>(s) = ∑<sub>a</sub>π(a|s)∑<sub>s',r</sub>p(s',r|s,a)[r(s,a) + γV<sub>k</sub>(s')]
-得到该策略下的价值函数V<sub>π</sub>
-B. 策略改进（Policy Improvement）
 
+B. 策略改进（Policy Improvement）
 基于当前的价值函数更新策略：
 π'(s) = argmax<sub>a</sub>∑<sub>s',r</sub>p(s',r|s,a)[r(s,a) + γV<sub>π</sub>(s')]
 如果新策略与旧策略相同，则算法收敛
+
 值迭代（Value Iteration）
 直接迭代计算最优价值函数
 不需要明确的策略评估步骤
