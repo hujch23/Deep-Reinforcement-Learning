@@ -1,4 +1,4 @@
-# 求职RL算法工程师必背知识点
+# What can i say, just do it!
 
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
