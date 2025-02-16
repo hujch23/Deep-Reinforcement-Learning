@@ -2,21 +2,10 @@
 
 ## 1. 基础概念  
 
-### 1.1 核心组件  
-- **Q:** 强化学习的基本组成部分有哪些？  
-- **A:** 主要包含以下组件：  
-  - Agent（智能体）  
-  - Environment（环境）  
-  - State（状态）  
-  - Action（动作）  
-  - Reward（奖励）  
-  - Policy（策略）  
+1.1 强化学习的基本组成部分有哪些？:主要包含以下组件：  Agent（智能体）  Environment（环境）   State（状态）  Action（动作）   Reward（奖励）   Policy（策略）  
 
-### 1.2 关键概念  
-- **Q:** 解释什么是回报（Return）和价值函数（Value Function）？  
-- **A:**   
-  - 回报：从某一时刻开始，未来所有奖励的折扣总和  
-  - 价值函数：从某个状态开始，遵循特定策略能够获得的期望回报  
+
+1.2 解释什么是回报（Return）和价值函数（Value Function）？  回报：从某一时刻开始，未来所有奖励的折扣总和  价值函数：从某个状态开始，遵循特定策略能够获得的期望回报  
 
 - **Q:** 全部可观测（full observability）、完全可观测（fully observed）和部分可观测（partially observed）?
 - **A:**
