@@ -2,10 +2,13 @@
 
 ## 1. 基础概念  
 
-1.1 强化学习的基本组成部分有哪些？:主要包含以下组件：  
-
-Agent（智能体）  Environment（环境）   State（状态）  Action（动作）   Reward（奖励）   Policy（策略）  
-
+1.1 强化学习的基本组成部分有哪些？
+  - Agent（智能体）
+  - Environment（环境）
+  -  State（状态）
+  -   Action（动作）
+  -   Reward（奖励）
+  -   Policy（策略）  
 
 1.2 解释什么是回报（Return）和价值函数（Value Function）？  
   - 回报：从某一时刻开始，未来所有奖励的折扣总和  
@@ -16,9 +19,9 @@ Agent（智能体）  Environment（环境）   State（状态）  Action（动�
   - 当智能体能够观察到环境的所有状态时，我们称这个环境是完全可观测的
   - 一般智能体不能观察到环境的所有状态时，我们称这个环境是部分可观测的
 
+1.4 部分可观测马尔可夫决策过程（partially observable Markov decision process，POMDP）?
+  - 即马尔可夫决策过程的泛化。部分可观测马尔可夫决策过程依然具有马尔可夫性质，但是其假设智能体无法感知环境的状态，只能知道部分观测值
 
-- **Q:** 部分可观测马尔可夫决策过程（partially observable Markov decision process，POMDP）?
-- **A:** 即马尔可夫决策过程的泛化。部分可观测马尔可夫决策过程依然具有马尔可夫性质，但是其假设智能体无法感知环境的状态，只能知道部分观测值。
 
 
 
