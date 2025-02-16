@@ -143,6 +143,30 @@ Q_{\pi}(s,a)=\sum_{s',r}p(s',r|s,a)r(s',a)+\gamma V_{\pi}(s')
 | 收敛速度 | 快 | 慢 | 中等 |
 | 特点 | 理论完备但计算昂贵	 | 无偏但方差大 | 平衡偏差和方差，实践最常用 |
 
+动态规划有两种主要方法：策略迭代（Policy Iteration）和值迭代（Value Iteration）。让我详细解释：
+
+策略迭代（Policy Iteration）
+包含两个交替进行的步骤：
+A. 策略评估（Policy Evaluation）
+
+固定当前策略π
+重复计算状态价值，直到收敛：
+V<sub>k+1</sub>(s) = ∑<sub>a</sub>π(a|s)∑<sub>s',r</sub>p(s',r|s,a)[r(s,a) + γV<sub>k</sub>(s')]
+得到该策略下的价值函数V<sub>π</sub>
+B. 策略改进（Policy Improvement）
+
+基于当前的价值函数更新策略：
+π'(s) = argmax<sub>a</sub>∑<sub>s',r</sub>p(s',r|s,a)[r(s,a) + γV<sub>π</sub>(s')]
+如果新策略与旧策略相同，则算法收敛
+值迭代（Value Iteration）
+直接迭代计算最优价值函数
+不需要明确的策略评估步骤
+更新公式：
+V<sub>k+1</sub>(s) = max<sub>a</sub>∑<sub>s',r</sub>p(s',r|s,a)[r(s,a) + γV<sub>k</sub>(s')]
+收敛后得到最优价值函数V*
+最后一步导出最优策略：
+π*(s) = argmax<sub>a</sub>∑<sub>s',r</sub>p(s',r|s,a)[r(s,a) + γV*(s')]
+
 #### 2.1.2 🔍 主要区别
 
 1. **环境模型要求**  DP：需要完整的环境模型（状态转移概率和奖励函数）、MC：只需要能够采样经验 、TD：只需要能够采样经验
