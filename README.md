@@ -114,7 +114,10 @@
 ```math
 V_{\pi}(s) = \sum_{a}\pi(a|s)\sum_{s',r}p(s',r|s,a)[r(s,a)+\gamma V_{\pi}(s')]
 ```
-  - 基于动作价值函数的贝尔曼方程: $Q{\pi}(s,a)=\sum{s',r}p(s',r|s,a)r(s',a)+\gamma V_{\pi}(s')$
+  - 基于动作价值函数的贝尔曼方程:
+```math
+Q_{\pi}(s,a)=\sum_{s',r}p(s',r|s,a)r(s',a)+\gamma V_{\pi}(s')
+```
 
 ### 1.20 一般怎么求解马尔可夫决策过程？
   - $$V(s)=R(S)+ \gamma \sum_{s' \in S}p(s'|s)V(s')$$. 特别地，其矩阵形式为 $\mathrm{V}=\mathrm{R}+\gamma \mathrm{PV}$。但是贝尔曼方程很难求解且计算复杂度较高，所以可以使用动态规划、蒙特卡洛以及时序差分等方法求解
