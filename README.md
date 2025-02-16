@@ -11,7 +11,7 @@
 - [核心算法](#核心算法)
   - [动态规划vs蒙特卡洛vs时序差分](##动态规划vs蒙特卡洛vs时序差分)
   - [Q-learning和Sarsa](##Q-learning和Sarsa)
-  - [DQN及其变种](##DQN及其变种)
+  - [DQN及变种](##DQN及变种)
   - [策略梯度方法](##策略梯度方法)
   - [actor-critic方法及变种](##actor-critic方法)
   - [PPO方法及变种](##PPO方法及变种)
