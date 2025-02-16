@@ -1,4 +1,4 @@
-# 🌞 求职强化学习算法工程师  CPNT睡觉王
+# 求职强化学习算法工程师  CPNT睡觉王
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
