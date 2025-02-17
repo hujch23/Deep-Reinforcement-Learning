@@ -227,7 +227,8 @@ $\rho_{t:t+n-1}^c = \min(c, \prod_{k=t}^{t+n-1} \frac{\pi(A_k|S_k)}{\mu(A_k|S_k)
 
 其中 $c$ 是截断阈值。
 
-class NStepQLearningMath:  
+
+class NStepQLearningMath:   
 
     def __init__(self, n_actions, n_steps=3, epsilon=0.1, alpha=0.5, gamma=0.95):  
         self.n_actions = n_actions  
