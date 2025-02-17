@@ -226,6 +226,8 @@ $Var(\rho_{t:t+n-1}) = E[(\prod_{k=t}^{t+n-1} \frac{\pi(A_k|S_k)}{\mu(A_k|S_k)})
 $\rho_{t:t+n-1}^c = \min(c, \prod_{k=t}^{t+n-1} \frac{\pi(A_k|S_k)}{\mu(A_k|S_k)})$
 
 其中 $c$ 是截断阈值。
+
+G_{t:t+n} = R_{t+1} + γ[ ∑_{a≠A_{t+1}} π(a|S_{t+1})Q(S_{t+1},a) + π(A_{t+1}|S_{t+1})G_{t+1:t+n} ]
                                                  
 
 ### 2.3 DQN算法及变种
