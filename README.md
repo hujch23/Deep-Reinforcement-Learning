@@ -172,6 +172,61 @@ Q_{\pi}(s,a)=\sum_{s',r}p(s',r|s,a)r(s',a)+\gamma V_{\pi}(s')
   - Q学习算法是一个比较典型的异策略算法，它有目标策略（target policy），用 $\pi$ 来表示。此外还有行为策略（behavior policy），用 $\mu$ 来表示。它分离了目标策略与行为策略，使得其可以大胆地用行为策略探索得到的经验轨迹来优化目标策略。这样智能体就更有可能探索到最优的策略
   - 比较Q学习算法和Sarsa算法的更新公式可以发现，Sarsa算法并没有选取最大值的操作。因此，Q学习算法是非常激进的，其希望每一步都获得最大的奖励；Sarsa算法则相对来说偏保守，会选择一条相对安全的迭代路线
 
+#### 补充知识：
+**N步Q-learning与重要性采样的数学推导**
+
+**1. N步回报的定义**
+
+在n步Q-learning中，n步回报 $G_t^{(n)}$ 定义为：
+
+$G_t^{(n)} = R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} + ... + \gamma^{n-1}R_{t+n} + \gamma^n \max_a Q(S_{t+n}, a)$
+
+其中：
+- $R_t$ 是在时间步t获得的即时奖励
+- $\gamma$ 是折扣因子
+- $Q(S_{t+n}, a)$ 是状态-动作值函数
+- $n$ 是步数
+
+**2. 重要性采样比率**
+
+当行为策略 $\mu$ 与目标策略 $\pi$ 不同时，重要性采样比率 $\rho_t$ 定义为：
+
+$\rho_t = \frac{\pi(A_t|S_t)}{\mu(A_t|S_t)}$
+
+其中：
+- $\pi(A_t|S_t)$ 是目标策略选择动作 $A_t$ 的概率
+- $\mu(A_t|S_t)$ 是行为策略选择动作 $A_t$ 的概率
+
+**3. n步累积重要性权重**
+
+对于n步序列，累积重要性权重 $\rho_{t:t+n-1}$ 为：
+
+$\rho_{t:t+n-1} = \prod_{k=t}^{t+n-1} \rho_k = \prod_{k=t}^{t+n-1} \frac{\pi(A_k|S_k)}{\mu(A_k|S_k)}$
+
+**4. 带重要性采样的n步Q-learning更新**
+
+Q值更新公式：
+
+$Q(S_t,A_t) \leftarrow Q(S_t,A_t) + \alpha \rho_{t:t+n-1}[G_t^{(n)} - Q(S_t,A_t)]$
+
+展开后：
+
+$Q(S_t,A_t) \leftarrow Q(S_t,A_t) + \alpha \prod_{k=t}^{t+n-1} \frac{\pi(A_k|S_k)}{\mu(A_k|S_k)} [R_{t+1} + \gamma R_{t+2} + ... + \gamma^{n-1}R_{t+n} + \gamma^n \max_a Q(S_{t+n}, a) - Q(S_t,A_t)]$
+
+**5. 方差分析**
+
+重要性采样比率的方差：
+
+$Var(\rho_{t:t+n-1}) = E[(\prod_{k=t}^{t+n-1} \frac{\pi(A_k|S_k)}{\mu(A_k|S_k)})^2] - (E[\prod_{k=t}^{t+n-1} \frac{\pi(A_k|S_k)}{\mu(A_k|S_k)}])^2$
+
+**6. 截断重要性采样**
+
+为控制方差，使用截断重要性采样：
+
+$\rho_{t:t+n-1}^c = \min(c, \prod_{k=t}^{t+n-1} \frac{\pi(A_k|S_k)}{\mu(A_k|S_k)})$
+
+其中 $c$ 是截断阈值。
+
 ### 2.3 DQN算法及变种
 
 
