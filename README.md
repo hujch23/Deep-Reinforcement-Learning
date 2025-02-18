@@ -265,7 +265,7 @@ $G_{t:t+n} = R_{t+1} + γ \sum_{a \in \mathcal{A}} π(a|S_{t+1}) [ Q(S_{t+1}, a)
 
 **TD目标**
 \[
-y_t^{DQN} = r_t + \gamma \max_{a'} Q(s_{t+1}, a'; \theta^-)
+$y_t^{DQN} = r_t + \gamma \max_{a'} Q(s_{t+1}, a'; \theta^-)$
 \]
 
 **损失函数**
