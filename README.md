@@ -264,28 +264,28 @@ $G_{t:t+n} = R_{t+1} + γ \sum_{a \in \mathcal{A}} π(a|S_{t+1}) [ Q(S_{t+1}, a)
 **DQN 更新公式**
 
 **TD目标**
-\[
+
 $y_t^{DQN} = r_t + \gamma \max_{a'} Q(s_{t+1}, a'; \theta^-)$
-\]
+
 
 **损失函数**
-\[
-L(\theta) = \mathbb{E} \left[ \left( y_t^{DQN} - Q(s_t, a_t; \theta) \right)^2 \right]
-\]
+
+$L(\theta) = \mathbb{E} \left[ \left( y_t^{DQN} - Q(s_t, a_t; \theta) \right)^2 \right]$
+
 
 ---
 
 **DDQN 更新公式**
 
 **TD目标**
-\[
-y_t^{DDQN} = r_t + \gamma Q(s_{t+1}, \arg\max_{a'} Q(s_{t+1}, a'; \theta); \theta^-)
-\]
+
+$y_t^{DDQN} = r_t + \gamma Q(s_{t+1}, \arg\max_{a'} Q(s_{t+1}, a'; \theta); \theta^-)$
+
 
 **损失函数**
-\[
-L(\theta) = \mathbb{E} \left[ \left( y_t^{DDQN} - Q(s_t, a_t; \theta) \right)^2 \right]
-\]
+
+$L(\theta) = \mathbb{E} \left[ \left( y_t^{DDQN} - Q(s_t, a_t; \theta) \right)^2 \right]$
+
 
 ---
 
