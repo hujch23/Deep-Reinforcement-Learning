@@ -7,19 +7,17 @@
 
 ## 📚 目录
 
-- [基础概念](#基础概念)
-- [核心算法](#核心算法)
-  - [动态规划vs蒙特卡洛vs时序差分](##动态规划vs蒙特卡洛vs时序差分)
-  - [Q-learning和Sarsa](##Q-learning和Sarsa)
-  - [DQN算法及变种](##DQN及变种)
-  - [策略梯度方法](##策略梯度方法)
-  - [actor-critic方法及变种](##actor-critic方法)
-  - [PPO算法及变种](##PPO方法及变种)
-  - [Molde-based_SOTA方法](##Molde-based_SOTA方法)
-- [调参技巧](#调参技巧)
+- [基础概念](#基础概念)  
+- [核心算法](#核心算法)  
+  - [动态规划 vs 蒙特卡洛 vs 时序差分](#动态规划-vs-蒙特卡洛-vs-时序差分)  
+  - [Q-learning 和 Sarsa](#q-learning-和-sarsa)  
+  - [DQN 算法及变种](#dqn-算法及变种)  
+  - [策略梯度方法](#策略梯度方法)  
+  - [Actor-Critic 方法及变种](#actor-critic-方法及变种)  
+  - [PPO 算法及变种](#ppo-算法及变种)  
+  - [Model-based SOTA 方法](#model-based-sota-方法)  
+- [调参技巧](#调参技巧)  
 - [实际应用](#实际应用)
-
-
 
 ## 📖 1. 基础概念  
 
