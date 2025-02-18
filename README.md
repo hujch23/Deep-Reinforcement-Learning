@@ -236,6 +236,8 @@ $G_{t:t+n} = R_{t+1} + γ \sum_{a \in \mathcal{A}} π(a|S_{t+1}) [ Q(S_{t+1}, a)
 
 ### 2.3 DQN算法及变种
 
+
+
 #### 2.3.1 深度Q网络是什么？其两个关键性的技巧分别是什么？
 深度Q网络（deep Q-network，DQN）：基于深度学习的Q学习算法，其结合了价值函数近似（value function approximation）与神经网络技术，并采用目标网络和经验回放等方法进行网络的训练
 
