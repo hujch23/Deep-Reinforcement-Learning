@@ -264,51 +264,22 @@ $G_{t:t+n} = R_{t+1} + γ \sum_{a \in \mathcal{A}} π(a|S_{t+1}) [ Q(S_{t+1}, a)
 **DQN 更新公式**
 
 **TD目标**
-
 $y_t^{DQN} = r_t + \gamma \max_{a'} Q(s_{t+1}, a'; \theta^-)$
 
-
 **损失函数**
-
 $L(\theta) = \mathbb{E} \left[ \left( y_t^{DQN} - Q(s_t, a_t; \theta) \right)^2 \right]$
-
-
----
 
 **DDQN 更新公式**
 
 **TD目标**
-
 $y_t^{DDQN} = r_t + \gamma Q(s_{t+1}, \arg\max_{a'} Q(s_{t+1}, a'; \theta); \theta^-)$
 
-
 **损失函数**
-
 $L(\theta) = \mathbb{E} \left[ \left( y_t^{DDQN} - Q(s_t, a_t; \theta) \right)^2 \right]$
 
 
 ---
 
-**符号解释**
-
-- \( Q(s, a; \theta) \): 主网络的 Q 值函数
-- \( Q(s, a; \theta^-) \): 目标网络的 Q 值函数
-- \( r_t \): 当前时间步的奖励
-- \( \gamma \): 折扣因子
-- \( s_t, s_{t+1} \): 当前状态和下一状态
-- \( a_t, a' \): 当前动作和下一步动作
-- \( \arg\max_{a'} \): 选择使 Q 值最大的动作
-
----
-
-**DQN 和 DDQN 的区别**
-
-| **算法** | **TD目标计算** | **特点** |
-|----------|----------------|----------|
-| **DQN**  | \( y_t^{DQN} = r_t + \gamma \max_{a'} Q(s_{t+1}, a'; \theta^-) \) | 使用目标网络直接计算下一状态的最大 Q 值，可能导致 Q 值过高估计。 |
-| **DDQN** | \( y_t^{DDQN} = r_t + \gamma Q(s_{t+1}, \arg\max_{a'} Q(s_{t+1}, a'; \theta); \theta^-) \) | 解耦动作选择和动作评估，主网络选择动作，目标网络评估动作 Q 值，减少过高估计问题。 |
-
----
 
 
 
