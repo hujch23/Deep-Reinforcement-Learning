@@ -309,9 +309,9 @@ $$
 ### 1. 从期望回报开始
 目标函数 $J(\theta)$ 表示为期望回报：
 
-$$
+$
 J(\theta) = \mathbb{E}_{\tau \sim \pi_\theta}[R(\tau)] = \int P(\tau; \theta) R(\tau) d\tau
-$$
+$
 
 其中 $P(\tau; \theta)$ 是轨迹 $\tau$ 的概率分布。
 
