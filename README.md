@@ -273,7 +273,7 @@ DQN不需要重要性采样的原因是它使用了经验回放（Experience Rep
 
 从目标函数开始：  
 
-$J(\theta) = \mathbb{E}_{\tau \sim p_\theta(\tau)}[R(\tau)]$
+J(\theta) = \mathbb{E}_{\tau \sim p_\theta(\tau)}[R(\tau)]
 
 展开期望为积分形式：  
 
@@ -293,7 +293,7 @@ $$\nabla_\theta J(\theta) = \int p_\theta(\tau)\nabla_\theta \log p_\theta(\tau)
 
 重写为期望形式：  
 
-$$\nabla_\theta J(\theta) = \mathbb{E}_{\tau \sim p_\theta(\tau)}[\nabla_\theta \log p_\theta(\tau)R(\tau)]$$  
+\nabla_\theta J(\theta) = \mathbb{E}_{\tau \sim p_\theta(\tau)}[\nabla_\theta \log p_\theta(\tau)R(\tau)]
 
 轨迹概率分解：  
 
@@ -309,7 +309,7 @@ $$\nabla_\theta \log p_\theta(\tau) = \sum_{t=0}^{T-1} \nabla_\theta \log \pi_\t
 
 最终得到策略梯度公式：  
 
-$$\nabla_\theta J(\theta) = \mathbb{E}_{\tau \sim p_\theta(\tau)}[\sum_{t=0}^{T-1} \nabla_\theta \log \pi_\theta(a_t|s_t)R(\tau)]$$
+\nabla_\theta J(\theta) = \mathbb{E}_{\tau \sim p_\theta(\tau)}[\sum_{t=0}^{T-1} \nabla_\theta \log \pi_\theta(a_t|s_t)R(\tau)]
 
 #### 2.4.2 基于策略梯度优化的技巧
 
