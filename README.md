@@ -270,46 +270,8 @@ DQN不需要重要性采样的原因是它使用了经验回放（Experience Rep
 #### 2.4.0 当我们最大化期望奖励时，应该使用什么方法？
 
 #### 2.4.1 手动推导一下策略梯度公式的计算过程
+![image](https://github.com/user-attachments/assets/12fc5230-73d9-499b-b918-42a0f8819533)
 
-从目标函数开始：  
-
-J(\theta) = \mathbb{E}_{\tau \sim p_\theta(\tau)}[R(\tau)]
-
-展开期望为积分形式：  
-
-$$J(\theta) = \int p_\theta(\tau)R(\tau)d\tau$$  
-
-对目标函数求导：  
-
-$$\nabla_\theta J(\theta) = \nabla_\theta \int p_\theta(\tau)R(\tau)d\tau$$  
-
-使用对数技巧：  
-
-$$\nabla_\theta p_\theta(\tau) = p_\theta(\tau)\frac{\nabla_\theta p_\theta(\tau)}{p_\theta(\tau)} = p_\theta(\tau)\nabla_\theta \log p_\theta(\tau)$$  
-
-代入原式：  
-
-$$\nabla_\theta J(\theta) = \int p_\theta(\tau)\nabla_\theta \log p_\theta(\tau)R(\tau)d\tau$$  
-
-重写为期望形式：  
-
-\nabla_\theta J(\theta) = \mathbb{E}_{\tau \sim p_\theta(\tau)}[\nabla_\theta \log p_\theta(\tau)R(\tau)]
-
-轨迹概率分解：  
-
-$$p_\theta(\tau) = p(s_0)\prod_{t=0}^{T-1} \pi_\theta(a_t|s_t)p(s_{t+1}|s_t,a_t)$$  
-
-取对数：  
-
-$$\log p_\theta(\tau) = \log p(s_0) + \sum_{t=0}^{T-1} [\log \pi_\theta(a_t|s_t) + \log p(s_{t+1}|s_t,a_t)]$$  
-
-求导（注意 $p(s_0)$ 和 $p(s_{t+1}|s_t,a_t)$ 与 $\theta$ 无关）：  
-
-$$\nabla_\theta \log p_\theta(\tau) = \sum_{t=0}^{T-1} \nabla_\theta \log \pi_\theta(a_t|s_t)$$  
-
-最终得到策略梯度公式：  
-
-\nabla_\theta J(\theta) = \mathbb{E}_{\tau \sim p_\theta(\tau)}[\sum_{t=0}^{T-1} \nabla_\theta \log \pi_\theta(a_t|s_t)R(\tau)]
 
 #### 2.4.2 基于策略梯度优化的技巧
 
