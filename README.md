@@ -265,130 +265,51 @@ DQN不需要重要性采样的原因是它使用了经验回放（Experience Rep
 
 **目标：** 回报最大化（策略梯度是无偏的但方差大，值函数逼近使用差分误差，有偏但方差小），采用随机梯度上升
 
-# 策略梯度（Policy Gradient）推导过程  
 
-## 1. 目标函数定义  
-
-首先，我们定义强化学习中的目标函数。目标是最大化期望累积奖励：  
-
-$$  
-J(\theta) = \mathbb{E}_{\tau \sim p_\theta(\tau)}[R(\tau)]  
-$$  
-
-其中：  
-- $\theta$ 是策略网络的参数；  
-- $\tau$ 表示轨迹（trajectory）；  
-- $p_\theta(\tau)$ 是在策略 $\pi_\theta$ 下产生轨迹 $\tau$ 的概率；  
-- $R(\tau)$ 是轨迹 $\tau$ 的累积奖励。  
-
----  
-
-## 2. 策略梯度推导  
-
-### 2.1 展开期望  
-
-首先，我们可以将期望展开为积分形式：  
-
-$$  
-J(\theta) = \int p_\theta(\tau)R(\tau)d\tau  
-$$  
-
-### 2.2 求导  
-
-对目标函数求导：  
-
-$$  
-\nabla_\theta J(\theta) = \nabla_\theta \int p_\theta(\tau)R(\tau)d\tau  
-$$  
-
-### 2.3 对数技巧  
-
-引入对数技巧（log trick）：  
-
-$$  
-\nabla_\theta p_\theta(\tau) = p_\theta(\tau)\frac{\nabla_\theta p_\theta(\tau)}{p_\theta(\tau)} = p_\theta(\tau)\nabla_\theta \log p_\theta(\tau)  
-$$  
-
-将其代入原式：  
-
-$$  
-\nabla_\theta J(\theta) = \int \nabla_\theta p_\theta(\tau)R(\tau)d\tau = \int p_\theta(\tau)\nabla_\theta \log p_\theta(\tau)R(\tau)d\tau  
-$$  
-
-### 2.4 重写为期望形式  
-
-将积分重写为期望形式：  
-
-$$  
-\nabla_\theta J(\theta) = \mathbb{E}_{\tau \sim p_\theta(\tau)}[\nabla_\theta \log p_\theta(\tau)R(\tau)]  
-$$  
-
-### 2.5 轨迹概率分解  
-
-轨迹概率可以分解为：  
-
-$$  
-p_\theta(\tau) = p(s_0)\prod_{t=0}^{T-1} \pi_\theta(a_t|s_t)p(s_{t+1}|s_t,a_t)  
-$$  
-
-对其取对数：  
-
-$$  
-\log p_\theta(\tau) = \log p(s_0) + \sum_{t=0}^{T-1} [\log \pi_\theta(a_t|s_t) + \log p(s_{t+1}|s_t,a_t)]  
-$$  
-
-### 2.6 求导简化  
-
-注意到 $p(s_0)$ 和 $p(s_{t+1}|s_t,a_t)$ 与 $\theta$ 无关，求导后为 $0$，所以：  
-
-$$  
-\nabla_\theta \log p_\theta(\tau) = \sum_{t=0}^{T-1} \nabla_\theta \log \pi_\theta(a_t|s_t)  
-$$  
-
-### 2.7 最终形式  
-
-代入之前的期望式，得到最终的策略梯度公式：  
-
-$$  
-\nabla_\theta J(\theta) = \mathbb{E}_{\tau \sim p_\theta(\tau)}\left[\sum_{t=0}^{T-1} \nabla_\theta \log \pi_\theta(a_t|s_t)R(\tau)\right]  
-$$  
-
----  
-
-## 3. 实践中的变体  
-
-### 3.1 使用优势函数  
-
-在实践中，通常使用优势函数 $A(s_t, a_t)$ 替代总回报 $R(\tau)$：  
-
-$$  
-\nabla_\theta J(\theta) = \mathbb{E}_{\tau \sim p_\theta(\tau)}\left[\sum_{t=0}^{T-1} \nabla_\theta \log \pi_\theta(a_t|s_t)A(s_t, a_t)\right]  
-$$  
-
-### 3.2 带基线的版本  
-
-为了减少方差，引入基线 $b(s_t)$：  
-
-$$  
-\nabla_\theta J(\theta) = \mathbb{E}_{\tau \sim p_\theta(\tau)}\left[\sum_{t=0}^{T-1} \nabla_\theta \log \pi_\theta(a_t|s_t)(R(\tau) - b(s_t))\right]  
-$$  
-
----  
-
-## 4. 重要性质  
-
-1. 策略梯度是无偏估计；  
-2. 可以进行在线更新；  
-3. 适用于连续动作空间；  
-4. 直接优化策略，而不是通过值函数间接优化。  
-
----  
-
-以上是策略梯度公式的完整推导过程，您可以直接在 GitHub Readme 文件中使用这些公式展示。
 
 #### 2.4.0 当我们最大化期望奖励时，应该使用什么方法？
 
 #### 2.4.1 手动推导一下策略梯度公式的计算过程
+
+从目标函数开始：  
+
+$$J(\theta) = \mathbb{E}_{\tau \sim p_\theta(\tau)}[R(\tau)]$$  
+
+展开期望为积分形式：  
+
+$$J(\theta) = \int p_\theta(\tau)R(\tau)d\tau$$  
+
+对目标函数求导：  
+
+$$\nabla_\theta J(\theta) = \nabla_\theta \int p_\theta(\tau)R(\tau)d\tau$$  
+
+使用对数技巧：  
+
+$$\nabla_\theta p_\theta(\tau) = p_\theta(\tau)\frac{\nabla_\theta p_\theta(\tau)}{p_\theta(\tau)} = p_\theta(\tau)\nabla_\theta \log p_\theta(\tau)$$  
+
+代入原式：  
+
+$$\nabla_\theta J(\theta) = \int p_\theta(\tau)\nabla_\theta \log p_\theta(\tau)R(\tau)d\tau$$  
+
+重写为期望形式：  
+
+$$\nabla_\theta J(\theta) = \mathbb{E}_{\tau \sim p_\theta(\tau)}[\nabla_\theta \log p_\theta(\tau)R(\tau)]$$  
+
+轨迹概率分解：  
+
+$$p_\theta(\tau) = p(s_0)\prod_{t=0}^{T-1} \pi_\theta(a_t|s_t)p(s_{t+1}|s_t,a_t)$$  
+
+取对数：  
+
+$$\log p_\theta(\tau) = \log p(s_0) + \sum_{t=0}^{T-1} [\log \pi_\theta(a_t|s_t) + \log p(s_{t+1}|s_t,a_t)]$$  
+
+求导（注意 $p(s_0)$ 和 $p(s_{t+1}|s_t,a_t)$ 与 $\theta$ 无关）：  
+
+$$\nabla_\theta \log p_\theta(\tau) = \sum_{t=0}^{T-1} \nabla_\theta \log \pi_\theta(a_t|s_t)$$  
+
+最终得到策略梯度公式：  
+
+$$\nabla_\theta J(\theta) = \mathbb{E}_{\tau \sim p_\theta(\tau)}[\sum_{t=0}^{T-1} \nabla_\theta \log \pi_\theta(a_t|s_t)R(\tau)]$$
 
 #### 2.4.2 基于策略梯度优化的技巧
 
