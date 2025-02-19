@@ -287,9 +287,9 @@ DQN不需要重要性采样的原因是它使用了经验回放（Experience Rep
 
 策略梯度定理的目标是最大化策略的期望回报 $J(\theta)$：
 
-$$
+$
 J(\theta) = \mathbb{E}_{\tau \sim \pi_\theta}[R(\tau)]
-$$
+$
 
 其梯度公式为：
 
