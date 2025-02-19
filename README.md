@@ -273,7 +273,7 @@ DQN不需要重要性采样的原因是它使用了经验回放（Experience Rep
 
 从目标函数开始：  
 
-$$J(\theta) = \mathbb{E}_{\tau \sim p_\theta(\tau)}[R(\tau)]$$  
+$J(\theta) = \mathbb{E}_{\tau \sim p_\theta(\tau)}[R(\tau)]$
 
 展开期望为积分形式：  
 
