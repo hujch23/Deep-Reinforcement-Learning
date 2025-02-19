@@ -271,6 +271,9 @@ DQN不需要重要性采样的原因是它使用了经验回放（Experience Rep
 
 #### 2.4.1 手动推导一下策略梯度公式的计算过程
 ![image](https://github.com/user-attachments/assets/12fc5230-73d9-499b-b918-42a0f8819533)
+![image](https://github.com/user-attachments/assets/20907d44-6aaf-4903-aab0-5b7d0013f922)
+![image](https://github.com/user-attachments/assets/b48f8f92-2959-45b4-84e1-cd8a290451f9)
+![image](https://github.com/user-attachments/assets/f08fca7c-ed53-4639-b1ed-434af6832091)
 
 
 #### 2.4.2 基于策略梯度优化的技巧
