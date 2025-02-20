@@ -284,9 +284,9 @@ DQN不需要重要性采样的原因是它使用了经验回放（Experience Rep
 
 **定义：**
 
-**与生成对抗网络的联系：** GAN中，生成器试图骗过判别器，判别器试图分辨真假
-Actor-Critic中，Actor和Critic是合作关系，Critic帮助Actor提升性能
-GAN的两个网络是对抗的，而Actor-Critic的两个网络是互补的
+**与生成对抗网络的联系：** GAN中，生成器试图骗过判别器，判别器试图分辨真假；
+Actor-Critic中，Actor和Critic是合作关系，Critic帮助Actor提升性能；
+GAN的两个网络是对抗的，而Actor-Critic的两个网络是互补的；
 GAN主要用于生成任务，Actor-Critic用于解决决策问题
 
 #### 2.5.1 actor-critic方法有何优点呢？完整的actor-critic方法的工作流程是怎样的？在实现actor-critic方法的时候有哪些技巧？
