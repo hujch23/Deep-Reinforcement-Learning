@@ -315,7 +315,8 @@ A3C算法的优势函数采用了n步回报的方式来估计Q值，具体是将
 
 #### 2.5.5 A3C算法的更新公式
 ![image](https://github.com/user-attachments/assets/cff13f72-5fc8-410d-b849-3542a941e82b)
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/9d1fc406-4d5e-4129-9030-480831615a32)
+
 
 
 #### 2.5.6 对于连续动作的控制空间和离散动作的控制空间，如果我们都采取策略网络，应该分别如何操作？
