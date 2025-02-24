@@ -407,10 +407,20 @@ GRPO算法不用Critic网络，而是对一组样本的奖励进行标准化来�
 ## 2.7 Model-based方法
 
 ### 2.7.1 AlphaGo
+![image](https://github.com/user-attachments/assets/52e4c677-76df-4130-9721-2888f0cfc9d4)
+![image](https://github.com/user-attachments/assets/5537ddbb-9a98-4095-b4db-ad2ceb2a7937)
+![image](https://github.com/user-attachments/assets/79074bd1-d40c-4214-b031-7e6f657a30d1)
 
 ### 2.7.2 AlphaZero
+![image](https://github.com/user-attachments/assets/443c5162-1a1d-4b0a-b797-0a9433439b90)
+![image](https://github.com/user-attachments/assets/83065327-ff1c-4539-bd2c-7c08471b412c)
+![image](https://github.com/user-attachments/assets/18caf55e-8d35-4ced-bc52-f7ef45e0ada7)
 
 ### 2.7.3 Muzero
+![image](https://github.com/user-attachments/assets/65af64cf-c65e-4bac-aae6-1746b2587dfb)
+![image](https://github.com/user-attachments/assets/36f870e5-d67f-4f53-8b63-b3a5278d0923)
+![image](https://github.com/user-attachments/assets/5f36a5a2-0ea2-4aac-8036-dbf650b72cf7)
+
 
 ### 2.7.4 Dreamer
 
