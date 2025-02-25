@@ -424,6 +424,22 @@ GRPO算法不用Critic网络，而是对一组样本的奖励进行标准化来�
 ![image](https://github.com/user-attachments/assets/36f870e5-d67f-4f53-8b63-b3a5278d0923)
 ![image](https://github.com/user-attachments/assets/5f36a5a2-0ea2-4aac-8036-dbf650b72cf7)
 
+#### AlphaGo 和 AlphaZero 的主要区别是什么？
+![image](https://github.com/user-attachments/assets/15bbf401-7d3d-4397-8139-11c0ef5ab295)
+
+#### AlphaZero 为什么能泛化到多个游戏？
+![image](https://github.com/user-attachments/assets/799047e7-fbf3-406c-a92a-6a1c9732ed9a)
+
+#### AlphaZero 的训练是否可以应用于实际工程问题？
+![image](https://github.com/user-attachments/assets/8b5e8346-df34-4533-945c-feb68d29f525)
+
+#### AlphaZero 是否可以解决非博弈类问题，如自动驾驶或医学诊断？
+![image](https://github.com/user-attachments/assets/6c986c2d-f8dc-41e2-9e0b-f9b81d2891f4)
+
+#### MCTS 的计算复杂度如何影响 AlphaZero 的决策速度？
+![image](https://github.com/user-attachments/assets/0e68f2a7-4160-4439-97de-e0240787ba20)
+
+
 
 ### 2.7.4 Dreamer系列
 Dreamer 是一种基于模型的强化学习（Model-Based Reinforcement Learning, MBRL）算法，由 DeepMind 提出。它的核心思想是通过学习一个潜在的环境模型（Latent Dynamics Model），在潜在空间中进行规划和决策，从而实现高效的强化学习
