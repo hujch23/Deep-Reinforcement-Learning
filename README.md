@@ -409,6 +409,7 @@ GRPO算法不用Critic网络，而是对一组样本的奖励进行标准化来�
 ![image](https://github.com/user-attachments/assets/848edd54-0f08-4cd1-98b6-76eef3924710)
 
 ### 2.7.1 AlphaGo
+![image](https://github.com/user-attachments/assets/19870530-1edc-4e0c-888d-9c4f84c22dfa)
 ![image](https://github.com/user-attachments/assets/52e4c677-76df-4130-9721-2888f0cfc9d4)
 ![image](https://github.com/user-attachments/assets/5537ddbb-9a98-4095-b4db-ad2ceb2a7937)
 ![image](https://github.com/user-attachments/assets/79074bd1-d40c-4214-b031-7e6f657a30d1)
