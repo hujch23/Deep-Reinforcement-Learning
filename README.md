@@ -406,9 +406,6 @@ GRPO算法不用Critic网络，而是对一组样本的奖励进行标准化来�
 
 ## 2.7 Model-based方法
 蒙特卡洛树搜索 = MinMax Tree Search + Monte Carlo Rollout
-![image](https://github.com/user-attachments/assets/7389f4b3-c892-46a9-aa78-15a1ae3b249c)
-![image](https://github.com/user-attachments/assets/3e6bdff8-daca-476a-a507-3811e0fe9c28)
-
 
 ### 2.7.1 AlphaGo
 ![image](https://github.com/user-attachments/assets/52e4c677-76df-4130-9721-2888f0cfc9d4)
