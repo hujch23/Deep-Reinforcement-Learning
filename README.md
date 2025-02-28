@@ -16,7 +16,7 @@
   - [actor-critic方法及变种](##actor-critic方法及变种)  
   - [PPO算法及变种](##PPO方法及变种)  
   - [Molde-based_SOTA方法](##Molde-based_SOTA方法)
-  - [模仿学习 AIRL GAIL](##模仿学习)
+  - [模仿学习 AIRL GAIL 扩散策略等](##模仿学习)
 - [调参技巧](#调参技巧)  
 - [实际应用](#实际应用)
 
