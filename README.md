@@ -121,7 +121,7 @@ V_{\pi}(s) = \sum_{a}\pi(a|s)\sum_{s',r}p(s',r|s,a)[r(s,a)+\gamma V_{\pi}(s')]
 ```
   - 基于动作价值函数的贝尔曼方程:
 ```math
-Q_{\pi}(s,a)=\sum_{s',r}p(s',r|s,a)r(s',a)+\gamma V_{\pi}(s')
+Q_{\pi}(s,a)=\sum_{s',r}p(s',r|s,a)[r(s',a)+\gamma V_{\pi}(s')]
 ```
 
 ### 1.19 一般怎么求解马尔可夫决策过程？
