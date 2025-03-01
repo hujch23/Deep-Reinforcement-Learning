@@ -401,7 +401,7 @@ GRPO算法不用Critic网络，而是对一组样本的奖励进行标准化来�
 #### 2.6.13 在KL惩罚方法中，固定惩罚强度和动态调整惩罚强度各有何优缺点？
 固定惩罚强度计算更加简单，但是对参数更加敏感：惩罚过强会限制探索，惩罚过弱会影响训练稳定性。动态调整惩罚强度可使KL散度维持在目标范围内，避免惩罚过强或过弱。不过需要额外的实现和计算来实现动态调整
 
-# 8.Model-based SOTA方法
+# 8.Model-based SOTA 方法
 蒙特卡洛树搜索 = MinMax Tree Search + Monte Carlo Rollout
 ![image](https://github.com/user-attachments/assets/848edd54-0f08-4cd1-98b6-76eef3924710)
 
