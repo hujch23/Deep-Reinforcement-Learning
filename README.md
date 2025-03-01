@@ -1,4 +1,4 @@
-# 🧸 入坑强化学习两年~
+# 🧸 入坑强化学习两年~目前研究Model-based RL、World Model
 
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
