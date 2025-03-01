@@ -14,7 +14,7 @@
 - [策略梯度方法](#5策略梯度方法)  
 - [actor-critic方法及变种](#6actor-critic方法及变种)  
 - [PPO算法及变种](#7ppo算法及变种)
-- [Molde-based_SOTA方法](#8molde-based_sota方法)  
+- [Model-based SOTA 方法](#8model-based-sota-方法) 
 - [模仿学习 AIRL GAIL 扩散策略等](#9模仿学习-AIRL-GAIL-扩散策略等)
 - [一些调参技巧](#10一些调参技巧)  
 
