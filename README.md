@@ -15,7 +15,7 @@
 - [actor-critic方法及变种](#6actor-critic方法及变种)  
 - [PPO算法及变种](#7ppo算法及变种)
 - [Model-based SOTA 方法](#8model-based-sota-方法) 
-- [模仿学习 AIRL GAIL 扩散策略等](#9模仿学习-AIRL-GAIL-扩散策略等)
+- [模仿学习：AIRL、GAIL、扩散策略等](#9模仿学习airl-gail-扩散策略等)
 - [一些调参技巧](#10一些调参技巧)  
 
 # 📖1. 强化学习基础概念  
