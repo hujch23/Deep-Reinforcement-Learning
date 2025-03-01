@@ -1,4 +1,4 @@
-# 🧸 What can i say, just do it!
+# 🧸 入坑强化学习两年~
 
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
