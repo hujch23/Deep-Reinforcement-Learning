@@ -9,13 +9,13 @@
 
 - [强化学习基础概念](#1-强化学习基础概念)  
 - [动态规划vs蒙特卡洛vs时序差分](#2动态规划vs蒙特卡洛vs时序差分)
-- [Q-learning和Sarsa](#3-Q-learning和Sarsa)  
-- [DQN算法及变种](#4-DQN算法及变种)  
-- [策略梯度方法](#5-策略梯度方法)  
-- [actor-critic方法及变种](#6-actor-critic方法及变种)  
-- [PPO算法及变种](#7-PPO方法及变种)  
-- [Molde-based_SOTA方法](#8-Molde-based_SOTA方法)
-- [模仿学习 AIRL GAIL 扩散策略等](#9-模仿学习-AIRL-GAIL-扩散策略等)
+- [Q-learning和Sarsa](#3Q-learning和Sarsa)  
+- [DQN算法及变种](#4DQN算法及变种)  
+- [策略梯度方法](#5策略梯度方法)  
+- [actor-critic方法及变种](#6actor-critic方法及变种)  
+- [PPO算法及变种](#7PPO方法及变种)  
+- [Molde-based_SOTA方法](#8Molde-based_SOTA方法)
+- [模仿学习 AIRL GAIL 扩散策略等](#9模仿学习-AIRL-GAIL-扩散策略等)
 - [一些调参技巧](#10一些调参技巧)  
 
 # 📖1. 强化学习基础概念  
