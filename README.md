@@ -15,7 +15,7 @@
 - [actor-critic方法及变种](#6actor-critic方法及变种)  
 - [PPO算法及变种](#7ppo算法及变种)
 - [Model-based SOTA 方法](#8model-based-sota-方法) 
-- [模仿学习：AIRL、GAIL、扩散策略等](#9模仿学习airl-gail-扩散策略等)
+- [模仿学习：AIRL、GAIL、扩散策略等](#模仿学习airl-gail-扩散策略等)
 - [一些调参技巧](#10一些调参技巧)  
 
 # 📖1. 强化学习基础概念  
@@ -440,7 +440,7 @@ GRPO算法不用Critic网络，而是对一组样本的奖励进行标准化来�
 ### 2.7.4 Dreamer系列
 Dreamer 是一种基于模型的强化学习（Model-Based Reinforcement Learning, MBRL）算法，由 DeepMind 提出。它的核心思想是通过学习一个潜在的环境模型（Latent Dynamics Model），在潜在空间中进行规划和决策，从而实现高效的强化学习
 
-# 9.模仿学习：AIRL、GAIL、扩散策略等  
+# 模仿学习：AIRL、GAIL、扩散策略等 
 
 # 10.一些调参技巧  
 
