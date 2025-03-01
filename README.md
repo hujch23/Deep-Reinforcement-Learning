@@ -154,7 +154,7 @@ Q_{\pi}(s,a)=\sum_{s',r}p(s',r|s,a)[r(s',a)+\gamma V_{\pi}(s')]
 1. **基本框架** 都遵循贝尔曼方程、都是迭代式的价值更新方法、都能用于策略评估和策略改进
 2. **目标** 都致力于估计价值函数、都能用于寻找最优策略、都能收敛到最优解（在适当条件下）
 
-# 2.Q-learning和Sarsa
+# 3.Q-learning和Sarsa
 
 #### 2.2.1 Q-learning 和 Sarsa区别？
   - 首先，Q学习是异策略的时序差分学习方法，而 Sarsa 算法是同策略的时序差分学习方法
@@ -229,7 +229,7 @@ $\rho_{t:t+n-1}^c = \min(c, \prod_{k=t}^{t+n-1} \frac{\pi(A_k|S_k)}{\mu(A_k|S_k)
 $G_{t:t+n} = R_{t+1} + γ \sum_{a \in \mathcal{A}} π(a|S_{t+1}) [ Q(S_{t+1}, a) + (a = A_{t+1}) ( G_{t+1:t+n} - Q(S_{t+1}, a) ) ]  $
                                                  
 
-# 3.DQN算法及变种
+# 4.DQN算法及变种
 
 ![Example Image](DQN.jpg) 
 
@@ -261,7 +261,7 @@ DQN虽然是off-policy，但因为其更新机制是基于贝尔曼方程的直�
 如果动作空间维度低，可以用动作离散化、NAF (Normalized Advantage Functions)，将Q函数分解，其中A(s,a)的设计是关键：A(s,a) = -1/2 (a - μ(s))^T P(s) (a - μ(s))，μ(s): 最优动作的均值，P(s)保证正定性质,使得A(s,a)在a=μ(s)时取得最大值
 
 
-# 4.策略梯度方法 
+# 5.策略梯度方法 
 
 **目标：** 回报最大化（策略梯度是无偏的但方差大，值函数逼近使用差分误差，有偏但方差小），采用随机梯度上升
 
@@ -280,7 +280,7 @@ DQN虽然是off-policy，但因为其更新机制是基于贝尔曼方程的直�
 
 
 
-# 5.Actor-Critic方法及变种  
+# 6.Actor-Critic方法及变种  
 
 **定义：** Actor-Critic是一种结合了策略网络(Actor)和值函数网络(Critic)的强化学习方法。Actor负责根据当前状态选择动作，就像一个决策者；Critic负责评估状态或状态-动作对的价值，就像一个评论家。这两个网络相互配合：Actor做出决策，Critic给出评价，Actor根据评价改进决策
 
@@ -348,7 +348,7 @@ TD3的第二个重要改进是延迟更新机制，通过降低策略网络和�
 
 TD3保留了DDPG的一些核心特性，如确定性策略、经验回放和软更新等机制，但通过上述三个关键改进，显著提升了算法在连续动作空间任务中的性能表现。实验表明，TD3在多个连续控制任务中都能取得比DDPG更好的效果，而且训练过程更加稳定，更不容易出现过拟合现
 
-# 6.PPO算法及变种  
+# 7.PPO算法及变种  
 ![image](https://github.com/user-attachments/assets/8f12f13c-30d4-4e8a-bd16-ac7a0775b1ff)
 ![image](https://github.com/user-attachments/assets/6e38a2aa-49ad-4af0-a119-95da97b41986)
 
@@ -401,7 +401,7 @@ GRPO算法不用Critic网络，而是对一组样本的奖励进行标准化来�
 #### 2.6.13 在KL惩罚方法中，固定惩罚强度和动态调整惩罚强度各有何优缺点？
 固定惩罚强度计算更加简单，但是对参数更加敏感：惩罚过强会限制探索，惩罚过弱会影响训练稳定性。动态调整惩罚强度可使KL散度维持在目标范围内，避免惩罚过强或过弱。不过需要额外的实现和计算来实现动态调整
 
-## 2.7 Model-based SOTA 方法
+# 8.Model-based SOTA方法
 蒙特卡洛树搜索 = MinMax Tree Search + Monte Carlo Rollout
 ![image](https://github.com/user-attachments/assets/848edd54-0f08-4cd1-98b6-76eef3924710)
 
