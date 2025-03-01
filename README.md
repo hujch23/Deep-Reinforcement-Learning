@@ -5,7 +5,7 @@
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
 [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/hujch23/Deep-Reinforcement-Learning/issues)
 
-## 📚 目录
+# 📚 目录
 
 - [强化学习基础概念](#1-强化学习基础概念)  
 - [强化学习核心算法](#2-强化学习核心算法)  
@@ -127,7 +127,7 @@ Q_{\pi}(s,a)=\sum_{s',r}p(s',r|s,a)[r(s',a)+\gamma V_{\pi}(s')]
 ### 1.19 一般怎么求解马尔可夫决策过程？
   - 我们求解马尔可夫决策过程时，可以直接求解贝尔曼方程或动态规划方程。但是贝尔曼方程很难求解且计算复杂度较高，所以可以使用动态规划、蒙特卡洛以及时序差分等方法求解
 
-## 🏆2. 强化学习核心算法  
+# 🏆2. 强化学习核心算法  
 
 ## 2.1 动态规划 vs 蒙特卡洛 vs 时序差分 
 
