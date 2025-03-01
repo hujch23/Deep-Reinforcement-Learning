@@ -229,7 +229,7 @@ $\rho_{t:t+n-1}^c = \min(c, \prod_{k=t}^{t+n-1} \frac{\pi(A_k|S_k)}{\mu(A_k|S_k)
 $G_{t:t+n} = R_{t+1} + γ \sum_{a \in \mathcal{A}} π(a|S_{t+1}) [ Q(S_{t+1}, a) + (a = A_{t+1}) ( G_{t+1:t+n} - Q(S_{t+1}, a) ) ]  $
                                                  
 
-# 3.DQN 算法及变种
+# 3.DQN算法及变种
 
 ![Example Image](DQN.jpg) 
 
@@ -280,7 +280,7 @@ DQN虽然是off-policy，但因为其更新机制是基于贝尔曼方程的直�
 
 
 
-# 5.Actor-Critic 方法及变种  
+# 5.Actor-Critic方法及变种  
 
 **定义：** Actor-Critic是一种结合了策略网络(Actor)和值函数网络(Critic)的强化学习方法。Actor负责根据当前状态选择动作，就像一个决策者；Critic负责评估状态或状态-动作对的价值，就像一个评论家。这两个网络相互配合：Actor做出决策，Critic给出评价，Actor根据评价改进决策
 
@@ -348,7 +348,7 @@ TD3的第二个重要改进是延迟更新机制，通过降低策略网络和�
 
 TD3保留了DDPG的一些核心特性，如确定性策略、经验回放和软更新等机制，但通过上述三个关键改进，显著提升了算法在连续动作空间任务中的性能表现。实验表明，TD3在多个连续控制任务中都能取得比DDPG更好的效果，而且训练过程更加稳定，更不容易出现过拟合现
 
-## 6.PPO 算法及变种  
+# 6.PPO算法及变种  
 ![image](https://github.com/user-attachments/assets/8f12f13c-30d4-4e8a-bd16-ac7a0775b1ff)
 ![image](https://github.com/user-attachments/assets/6e38a2aa-49ad-4af0-a119-95da97b41986)
 
@@ -440,7 +440,7 @@ GRPO算法不用Critic网络，而是对一组样本的奖励进行标准化来�
 ### 2.7.4 Dreamer系列
 Dreamer 是一种基于模型的强化学习（Model-Based Reinforcement Learning, MBRL）算法，由 DeepMind 提出。它的核心思想是通过学习一个潜在的环境模型（Latent Dynamics Model），在潜在空间中进行规划和决策，从而实现高效的强化学习
 
-## 2.8 模仿学习：AIRL、GAIL、扩散策略等
+# 8.模仿学习：AIRL、GAIL、扩散策略等
 
 # 3. 一些调参技巧  
 
