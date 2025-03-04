@@ -442,9 +442,9 @@ Dreamer 是一种基于模型的强化学习（Model-Based Reinforcement Learnin
 
 # 9.模仿学习：AIRL GAIL 扩散策略等 
 
-# 10.一些调参技巧  
 
-# 11. 3D Diffusion Policy
+
+# 9.1 3D Diffusion Policy
 
 **挑战：** 多模式multimodal distributions, 序列相关性sequential correlation, 高精度and the requirement of high precision
 
@@ -453,12 +453,13 @@ Diffusion Policy 的核心是将机器人策略学习建模为一种基于扩散
 - 通过直接学习能量函数的梯度，Diffusion Policy 避免了传统能量模型中对归一化常数进行负采样的需求，从而实现了更稳定的训练过程
 - 高维动作空间：扩散模型在高维输出空间（如图像生成）中表现优异，这使得 Diffusion Policy 能够预测长时间的动作序列，保证时间一致性
 
-- 闭环动作序列预测：结合扩散模型的长时间动作序列预测能力与回退视界控制（Receding Horizon Control），实现了动作的闭环规划，既保证了长时间规划的连贯性，又能快速响应环境变化
-- 视觉条件化（Visual Conditioning）：将视觉观测作为条件输入，而不是联合分布的一部分，从而减少计算开销并提高实时推理能力
-- 时间序列扩散 Transformer：提出了一种基于 Transformer 的扩散网络，解决了传统 CNN 模型在高频动作变化任务中的过平滑问题 
+论文提出了以下技术改进以适应机器人视觉运动控制任务：
+- **闭环动作序列预测**：结合扩散模型的长时间动作序列预测能力与回退视界控制（Receding Horizon Control），实现了动作的闭环规划，既保证了长时间规划的连贯性，又能快速响应环境变化
+- **视觉条件化**（Visual Conditioning）：将视觉观测作为条件输入，而不是联合分布的一部分，从而减少计算开销并提高实时推理能力
+- **时间序列扩散 Transformer**：提出了一种基于 Transformer 的扩散网络，解决了传统 CNN 模型在高频动作变化任务中的过平滑问题 
 
 
 
-
+# 10.一些调参技巧  
 
 
