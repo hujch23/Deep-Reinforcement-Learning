@@ -445,7 +445,7 @@ Dreamer 是一种基于模型的强化学习（Model-Based Reinforcement Learnin
 
 
 # 9.1 3D Diffusion Policy
-
+https://github.com/real-stanford/diffusion_policy
 **挑战：** 多模式multimodal distributions, 序列相关性sequential correlation, 高精度and the requirement of high precision
 
 Diffusion Policy 的核心是将机器人策略学习建模为一种基于扩散模型的生成过程。具体来说：
@@ -456,11 +456,14 @@ Diffusion Policy 的核心是将机器人策略学习建模为一种基于扩散
 论文提出了以下技术改进以适应机器人视觉运动控制任务：
 - **闭环动作序列预测**：结合扩散模型的长时间动作序列预测能力与回退视界控制（Receding Horizon Control），实现了动作的闭环规划，既保证了长时间规划的连贯性，又能快速响应环境变化
 - **视觉条件化**（Visual Conditioning）：将视觉观测作为条件输入，而不是联合分布的一部分，从而减少计算开销并提高实时推理能力
-- **时间序列扩散 Transformer**：提出了一种基于 Transformer 的扩散网络，解决了传统 CNN 模型在高频动作变化任务中的过平滑问题 
-
+- **时间序列扩散 Transformer**：提出了一种基于 Transformer 的扩散网络，解决了传统 CNN 模型在高频动作变化任务中的过平滑问题
+- 
+消融实验表明：
 - **观察窗口长度**：对于视觉输入，较短的观察窗口（如 2 帧）效果最佳。
 - **动作预测长度**：较长的动作预测序列有助于时间一致性，但会降低响应速度，最佳长度为 8 步。
 - **视觉编码器**：端到端训练的视觉编码器优于预训练模型（如 ImageNet 或 R3M）
+
+
 
 # 10.一些调参技巧  
 
