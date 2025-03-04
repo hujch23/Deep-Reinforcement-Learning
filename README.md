@@ -445,7 +445,8 @@ Dreamer 是一种基于模型的强化学习（Model-Based Reinforcement Learnin
 
 
 # 9.1 3D Diffusion Policy
-https://github.com/real-stanford/diffusion_policy
+2023 RSS Diffusion Policy: Visuomotor Policy Learning via Action Diffusion，项目链接：https://github.com/real-stanford/diffusion_policy
+
 **挑战：** 多模式multimodal distributions, 序列相关性sequential correlation, 高精度and the requirement of high precision
 
 Diffusion Policy 的核心是将机器人策略学习建模为一种基于扩散模型的生成过程。具体来说：
