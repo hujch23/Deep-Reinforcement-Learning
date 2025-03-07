@@ -440,6 +440,13 @@ GRPO算法不用Critic网络，而是对一组样本的奖励进行标准化来�
 ### 8.9 Dreamer系列
 Dreamer 是一种基于模型的强化学习（Model-Based Reinforcement Learning, MBRL）算法，由 DeepMind 提出。它的核心思想是通过学习一个潜在的环境模型（Latent Dynamics Model），在潜在空间中进行规划和决策，从而实现高效的强化学习
 
+**DreamerV2**的核心公式通过以下方式实现：
+
+- 世界模型学习：通过图像、奖励和折扣因子的预测损失，学习环境的潜在动态、使用 KL 散度正则化，确保潜变量的分布具有泛化能力、KL 平衡技术避免了未充分训练的先验分布对后验分布的过度约束
+- 行为学习：使用 Actor-Critic 方法在潜变量空间中优化策略、Critic 通过 λ-目标值估计未来奖励总和、Actor 结合 Reinforce 梯度和动态反向传播，优化策略以最大化 Critic 的预测值
+
+
+
 # 9.模仿学习：AIRL GAIL 扩散策略等 
 
 
