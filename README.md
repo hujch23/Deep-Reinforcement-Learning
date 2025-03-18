@@ -445,6 +445,7 @@ Dreamer 是一种基于模型的强化学习（Model-Based Reinforcement Learnin
 
 - 世界模型学习：通过图像、奖励和折扣因子的预测损失，学习环境的潜在动态、使用 KL 散度正则化，确保潜变量的分布具有泛化能力、KL 平衡技术避免了未充分训练的先验分布对后验分布的过度约束
 - 行为学习：使用 Actor-Critic 方法在潜变量空间中优化策略、Critic 通过 λ-目标值估计未来奖励总和、Actor 结合 Reinforce 梯度和动态反向传播，优化策略以最大化 Critic 的预测值
+- 分类VAE：将每张图像转换为 32 个分布，每个分布有 32 个类，其含义随着世界模型的学习而自动确定。这One-Hot 向量从这些分布中采样的 sparse 表示形式被连接成一个稀疏表示形式，该表示形式被传递给 recurrent 状态
 
 
 
@@ -452,7 +453,7 @@ Dreamer 是一种基于模型的强化学习（Model-Based Reinforcement Learnin
 
 
 
-# 9.1 3D Diffusion Policy
+# 9.1 Diffusion Policy
 2023 RSS Diffusion Policy: Visuomotor Policy Learning via Action Diffusion，项目链接：https://github.com/real-stanford/diffusion_policy
 
 **挑战：** 多模式multimodal distributions, 序列相关性sequential correlation, 高精度and the requirement of high precision
